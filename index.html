@@ -1,0 +1,55 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Movie Finder 🎬</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="top-bar">
+    <h1 class="site-title">🎬 MoodFlicks</h1>
+    <p class="site-sub">Pick a mood, find your movie.</p>
+  </div>
+
+  <!-- Mood Buttons -->
+  <div class="mood-section">
+    <p class="mood-label">How are you feeling today?</p>
+    <div class="mood-buttons">
+      <button class="mood-btn" data-mood="Happy" onclick="chooseMood('Happy')">😄 Happy</button>
+      <button class="mood-btn" data-mood="Sad" onclick="chooseMood('Sad')">😢 Sad</button>
+      <button class="mood-btn" data-mood="Excited" onclick="chooseMood('Excited')">🤩 Excited</button>
+      <button class="mood-btn" data-mood="Chill" onclick="chooseMood('Chill')">😌 Chill</button>
+    </div>
+  </div>
+
+  <!-- Search + Sort (hidden until mood is picked) -->
+  <div class="controls" id="controls" style="display:none;">
+    <input type="text" id="searchBox" placeholder="🔍 Search movies..." oninput="filterMovies()">
+    <select id="sortSelect" onchange="sortMovies()">
+      <option value="default">Sort By</option>
+      <option value="rating">⭐ Rating</option>
+      <option value="popularity">🔥 Popularity</option>
+    </select>
+  </div>
+
+  <!-- Loading spinner -->
+  <div class="spinner" id="spinner" style="display:none;">
+    <div class="spin-circle"></div>
+    <p>Finding movies for you...</p>
+  </div>
+
+  <!-- Movie Grid -->
+  <div class="movie-grid" id="movieGrid"></div>
+
+  <!-- No results message -->
+  <p class="no-results" id="noResults" style="display:none;">No movies found. Try a different search!</p>
+
+  <footer>
+    <p>Made with ☕ and JavaScript — powered by TMDB</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body></html>
