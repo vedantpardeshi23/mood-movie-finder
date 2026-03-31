@@ -1,0 +1,76 @@
+body {
+  font-family: Arial;
+  background-color: cadetblue;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.mood-btn {
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.mood-btn.active {
+  background-color: lightblue;
+}
+
+#controls {
+  margin-top: 15px;
+}
+
+#searchBox {
+  padding: 6px;
+  width: 200px;
+}
+
+#sortSelect {
+  padding: 6px;
+}
+
+#movieGrid {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  border: 1px solid black;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+}
+
+.movie-card img {
+  width: 100%;
+}
+
+#spinner {
+  margin-top: 20px;
+}
+
+#noResults {
+  margin-top: 20px;
+  color: red;
+}
+@media (max-width: 600px) {
+  #movieGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-card {
+    width: 80%;
+  }
+
+  #searchBox {
+    width: 80%;
+  }
+}
